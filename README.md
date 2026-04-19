@@ -99,7 +99,7 @@ Double-click index.html → opens in any browser (Chrome/Edge/Firefox)
 |------|--------|----------------|
 | Team Lead + Script Dev | [Member 1] | Regex design, validate.js, edge cases |
 | UI Developer | Mansi Shinde  | index.html, style.css, UX, ARIA |
-| Documentation Lead | [Member 3] | Theory supplement, DFA diagrams, report |
+| Documentation Lead | Shreya Bhagat | Theory supplement, DFA diagrams, report |
 | QA + Testing | [Member 4] | Test report, boundary cases, ZIP submission |
 
 ---
