@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration System | TOC Mini-Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header class="site-header">
+      <div class="badge" aria-label="Course Information">TOC · 2304220T · Group Mini-Project</div>
+      <h1 class="site-title">Student Registration<br/><span class="accent">System Validator</span></h1>
+      <p class="site-subtitle">Regex-powered form validation · Topic #1</p>
+      <div class="header-decoration" aria-hidden="true">^[A-Za-z\s]{2,50}$</div>
+    </header>
+
+    <main>
+      <form id="registrationForm" novalidate autocomplete="off" aria-label="Student Registration Form">
+
+        <!-- ══════════════════════════════════════════
+             FIELD 1 · Full Name · type="text"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-fullName">
+          <label for="fullName">
+            Full Name <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              placeholder="e.g. Riya Sharma"
+              maxlength="50"
+              aria-describedby="fullName-hint fullName-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="fullName-hint">2–50 letters and spaces only</p>
+          <p class="error-msg" id="fullName-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 2 · PRN Number · type="text"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-prn">
+          <label for="prn">
+            PRN Number <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="text"
+              id="prn"
+              name="prn"
+              placeholder="e.g. 230422001234"
+              maxlength="12"
+              inputmode="numeric"
+              aria-describedby="prn-hint prn-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="prn-hint">Exactly 12 digits</p>
+          <p class="error-msg" id="prn-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 3 · College Email · type="email"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-email">
+          <label for="email">
+            College Email <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. riya.sharma@college.edu.in"
+              aria-describedby="email-hint email-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="email-hint">Format: local@domain.tld (e.g. name@college.edu.in)</p>
+          <p class="error-msg" id="email-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 4 · Mobile Number · type="tel"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-mobile">
+          <label for="mobile">
+            Mobile Number <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              placeholder="e.g. 9876543210"
+              maxlength="10"
+              aria-describedby="mobile-hint mobile-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="mobile-hint">10-digit Indian number — must start with 6, 7, 8 or 9</p>
+          <p class="error-msg" id="mobile-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 5 · Date of Birth · type="date"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-dob">
+          <label for="dob">
+            Date of Birth <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              min="1990-01-01"
+              max="2010-12-31"
+              aria-describedby="dob-hint dob-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="dob-hint">Pick your DOB — must be between 1990 and 2010</p>
+          <p class="error-msg" id="dob-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 6 · Year of Admission · type="number"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-admYear">
+          <label for="admYear">
+            Year of Admission <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="number"
+              id="admYear"
+              name="admYear"
+              placeholder="e.g. 2023"
+              min="2000"
+              max="2030"
+              step="1"
+              aria-describedby="admYear-hint admYear-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="admYear-hint">4-digit year between 2000 and 2030</p>
+          <p class="error-msg" id="admYear-error" role="alert" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 7 · Password · type="password"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-password">
+          <label for="password">
+            Password <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Min 8 chars, mixed case, digit, symbol"
+              aria-describedby="password-hint password-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+            <span class="status-icon" aria-hidden="true"></span>
+          </div>
+          <p class="hint" id="password-hint">Min 8 chars · Uppercase · Lowercase · Digit · Symbol (@$!%*?&)</p>
+          <p class="error-msg" id="password-error" role="alert" aria-live="polite"></p>
+          <div class="strength-bar-wrap" role="meter" aria-label="Password strength" aria-valuemin="0" aria-valuemax="5">
+            <div class="strength-bar" id="strengthBar"></div>
+          </div>
+          <p class="strength-label" id="strengthLabel" aria-live="polite"></p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             FIELD 8 · Profile Photo · type="file"
+        ══════════════════════════════════════════ -->
+        <div class="field-group" id="fg-photo">
+          <label for="photo">
+            Profile Photo <span class="required" aria-label="required">*</span>
+          </label>
+          <div class="input-wrap file-wrap">
+            <input
+              type="file"
+              id="photo"
+              name="photo"
+              accept=".jpg,.jpeg,.png"
+              aria-describedby="photo-hint photo-error"
+              aria-required="true"
+              aria-invalid="false"
+            />
+          </div>
+          <p class="hint" id="photo-hint">JPG / PNG only · Max 2 MB · Filename: letters, numbers, _ or -</p>
+          <p class="error-msg" id="photo-error" role="alert" aria-live="polite"></p>
+          <div class="file-preview" id="filePreview" hidden>
+            <img id="previewImg" src="" alt="Profile photo preview" />
+            <p id="previewName"></p>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             ACTIONS
+        ══════════════════════════════════════════ -->
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" aria-label="Submit registration form">Register</button>
+          <button type="button" id="resetBtn" aria-label="Reset all form fields">Reset</button>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             SUCCESS BANNER
+        ══════════════════════════════════════════ -->
+        <div id="formSuccess" class="form-success" role="status" aria-live="polite" hidden>
+          <span class="success-icon" aria-hidden="true">✓</span>
+          <div>
+            <p class="success-title">Registration Successful!</p>
+            <p class="success-sub">All 8 fields passed regex validation.</p>
+          </div>
+        </div>
+
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>Department of Computer Engineering · AY 2025–26 · Theory of Computation (2304220T) · Topic #1</p>
+    </footer>
+
+  </div>
+  <script src="validate.js"></script>
+</body>
+</html>
