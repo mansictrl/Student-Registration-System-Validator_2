@@ -104,21 +104,13 @@ Double-click index.html → opens in any browser (Chrome/Edge/Firefox)
 | Role | Member | Responsibility |
 |------|--------|----------------|
 | Team Lead + Script Dev | [Member 1] | Regex design, validate.js, edge cases |
-| UI Developer | [Member 2] | index.html, style.css, UX, ARIA |
+| UI Developer | Mansi Shinde  | index.html, style.css, UX, ARIA |
 | Documentation Lead | [Member 3] | Theory supplement, DFA diagrams, report |
 | QA + Testing | [Member 4] | Test report, boundary cases, ZIP submission |
 
 ---
 
-## 📄 Submission Format
 
-Rename ZIP before submitting:
-```
-<PRN_of_GroupLeader>_Topic1.zip
-Example: 230422001234_Topic1.zip
-```
-
----
 
 ## 🔗 Course Details
 
