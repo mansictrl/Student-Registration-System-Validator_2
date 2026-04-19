@@ -12,12 +12,6 @@ regex_project/
 ├── index.html            ← Main web form (8 input fields)
 ├── style.css             ← All styling: dark theme, error/success states, animations
 ├── validate.js           ← All regex patterns + JavaScript validation engine
-│
-├── test_report.html      ← 48 test cases (3 valid + 3 invalid per field)
-├── theory_supplement.html← Formal L={} notation, DFA diagrams, automata justification
-├── group_report.html     ← 1-page group report: roles, challenges, learnings
-│
-└── README.md             ← This file
 ```
 
 ---
